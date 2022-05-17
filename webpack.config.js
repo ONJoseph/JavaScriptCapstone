@@ -38,6 +38,10 @@ module.exports = {
         test: /\.(eot|ttf|woff|woff2)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
     ],
   },
 };
