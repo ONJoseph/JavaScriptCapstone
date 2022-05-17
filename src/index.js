@@ -1,2 +1,6 @@
 import './style.css';
-// import logo from './logoImg.jpg';
+import refresh from './modules/refresh.js';
+
+const moviesBtn = document.getElementById('movies');
+
+moviesBtn.addEventListener('click', refresh);
