@@ -2,7 +2,7 @@ import './style.css';
 import logo from './logoImg.jpg';
 import getShows from './getMoviez.js';
 
-//Add logo img
+// Add logo img
 
 const element = document.querySelector('.logoContainer');
 const mylogo = new Image();
