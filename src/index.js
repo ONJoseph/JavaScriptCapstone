@@ -1,2 +1,2 @@
 import './style.css';
-/* import logo from './logoImg.jpg'; */
+// import logo from './logoImg.jpg';
