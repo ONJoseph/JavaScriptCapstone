@@ -1,6 +1,14 @@
 import './style.css';
-import refresh from './modules/refresh.js';
+import logo from './logoImg.jpg';
+import getShows from './getMoviez.js';
 
-const moviesBtn = document.getElementById('movies');
+// Add logo img
 
-moviesBtn.addEventListener('click', refresh);
+const element = document.querySelector('.logoContainer');
+const mylogo = new Image();
+mylogo.className = 'logo';
+mylogo.src = logo;
+
+element.append(mylogo);
+
+getShows();
