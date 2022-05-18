@@ -1,5 +1,3 @@
-import { fetchLikes } from './fetchLikes.js';
-
 export const showsList = [];
 const frontmoviez = document.querySelector('.Shows');
 const modalPopUp = document.querySelector('.modal');
@@ -100,7 +98,6 @@ export default async function getShows() {
   });
   if (response.ok) {
     likearray = await response.json();
-    console.log(likearray);
   } else {
     Error(`API request error: ${response.status}`);
   }
@@ -109,7 +106,6 @@ export default async function getShows() {
   likeIcons.forEach(async (icon) => {
     const ID = icon.id;
     const myarray = likearray.filter((element) => element.item_id === ID);
-    console.log(`${ID} : ${myarray[0].likes}`);
     icon.insertAdjacentHTML('afterend', `<span id="sp${ID}">${myarray[0].likes}</span>`);
     icon.addEventListener('click', () => {
       addlike(ID);
