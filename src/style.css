@@ -18,7 +18,7 @@ body {
   padding: 0.5rem;
 }
 
-.bHeader {
+.botHeader {
   display: flex;
   justify-content: space-between;
   width: 100%;
