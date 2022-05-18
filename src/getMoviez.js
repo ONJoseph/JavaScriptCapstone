@@ -3,7 +3,6 @@ import { submitComment, displayComments } from './comments.js';
 export const showsList = [];
 const frontmoviez = document.querySelector('.Shows');
 const modalPopUp = document.querySelector('.modal');
-
 const popShow = (arr) => {
   frontmoviez.innerHTML = '';
   arr.forEach((movie) => {
@@ -34,7 +33,7 @@ export function createModal(showID) {
   modalPopUp.style.display = 'block';
   modalPopUp.style.width = '90vw';
   modalPopUp.style.height = '90vh';
-  modalPopUp.style.backgroundColor = '#f6f6f6';
+  modalPopUp.style.backgroundColor = '#F6F6F6';
   const content = `
   <div class="show-container">
     <span class="close-btn">×</span>
@@ -115,4 +114,5 @@ export default async function getShows() {
       createModal(ID - 1);
     });
   });
+  return showsList;
 }
