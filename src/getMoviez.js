@@ -1,7 +1,10 @@
 export const showsList = [];
 const frontmoviez = document.querySelector('.Shows');
 const modalPopUp = document.querySelector('.modal');
+<<<<<<< HEAD
 
+=======
+>>>>>>> displayitems
 const popShow = (arr) => {
   frontmoviez.innerHTML = '';
   arr.forEach((movie) => {
@@ -16,13 +19,20 @@ const popShow = (arr) => {
     frontmoviez.insertAdjacentHTML('beforeend', eachMovie);
   });
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> displayitems
 export function createModal(showID) {
   const closeBtn = document.getElementsByClassName('close-btn');
   modalPopUp.style.display = 'block';
   modalPopUp.style.width = '90vw';
   modalPopUp.style.height = '90vh';
+<<<<<<< HEAD
   modalPopUp.style.backgroundColor = '#f6f6f6';
+=======
+  modalPopUp.style.backgroundColor = '#F6F6F6';
+>>>>>>> displayitems
   const content = `
   <div class="show-container">
     <span class="close-btn">×</span>
@@ -63,7 +73,10 @@ export function createModal(showID) {
     modalPopUp.style.display = 'none';
   });
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> displayitems
 export default async function getShows() {
   const res = await fetch('https://api.tvmaze.com/shows');
   const data = await res.json();
@@ -79,4 +92,8 @@ export default async function getShows() {
     });
   });
   return showsList;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> displayitems
