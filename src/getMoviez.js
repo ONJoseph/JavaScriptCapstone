@@ -6,7 +6,6 @@ const modalPopUp = document.querySelector('.modal');
 const popShow = (arr) => {
   frontmoviez.innerHTML = '';
   arr.forEach((movie) => {
-
     const eachMovie = `
     <div class=movie id=${movie.id}>
       <h2 class="movie-title">${movie.name}</h2>
