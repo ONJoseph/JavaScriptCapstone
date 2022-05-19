@@ -1,4 +1,4 @@
-import updateCounter from './comments.js';
+import updateCounter from '../comments.js';
 
 jest.mock('./comments.js');
 

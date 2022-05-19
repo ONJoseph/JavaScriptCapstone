@@ -34,4 +34,4 @@ function updateCounter() {
   const updatedCounter = commentsCounter;
   return updatedCounter;
 }
-
+export const updateCounter = updatedCounter;
