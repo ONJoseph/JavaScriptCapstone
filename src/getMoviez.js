@@ -1,8 +1,10 @@
 import { submitComment, displayComments } from './comments.js';
+import itemCounter from './itemCounter.js';
 
 export const showsList = [];
 const frontmoviez = document.querySelector('.Shows');
 const modalPopUp = document.querySelector('.modal');
+
 const popShow = (arr) => {
   frontmoviez.innerHTML = '';
   arr.forEach((movie) => {
@@ -121,6 +123,7 @@ export default async function getShows() {
     showsList.push(data[i]);
   }
   popShow(showsList);
+  document.querySelector('.label').innerHTML = `Items: ${itemCounter()}`;
   const commentBtns = document.querySelectorAll('.comment-btn');
   commentBtns.forEach((btn) => {
     const ID = btn.value;

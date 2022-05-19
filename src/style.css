@@ -198,6 +198,10 @@ button:hover,
   font-family: "Roboto", sans-serif;
 }
 
+.label {
+  margin: 20px;
+}
+
 .dev {
   display: flex;
   align-items: flex-start;
