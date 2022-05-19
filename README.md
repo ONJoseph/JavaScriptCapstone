@@ -144,6 +144,11 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- TV Amaze API to retrieve shows data
+  - More information [Here](https://www.tvmaze.com/api)
+- Involvement API to store and retireve likes and comments
+  - More information [Here](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270)
+
 
 ## 📝 License
 
