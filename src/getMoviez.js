@@ -12,9 +12,10 @@ const popShow = (arr) => {
       <img class="movie-image" src=${movie.image.medium}>
       <div class= "userInterAct">
         <button class="comment-btn" value="${movie.id}">Comment</button>
-        <i class="fas fa-heart" data-id="${movie.id}"></i>
+        <i class="fas fa-heart" id="${movie.id}"></i>
       </div>
     </div>`;
+
     frontmoviez.insertAdjacentHTML('beforeend', eachMovie);
   });
 };
@@ -100,6 +101,19 @@ export function createModal(showID) {
   displayComments(`'${showID}'`);
 }
 
+const addlike = async (ID) => {
+  const uri = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xyqrGgTcdx9Ydfnm5uk2/likes';
+  const response = await fetch(uri, {
+    method: 'POST',
+    body: JSON.stringify({ item_id: ID }),
+    headers: { 'Content-type': 'application/json; charset=UTF-8' },
+  });
+  if (response.ok) {
+    const likes = document.getElementById(`sp${ID}`).innerHTML;
+    document.getElementById(`sp${ID}`).innerHTML = parseInt(likes, 10) + 1;
+  }
+};
+
 export default async function getShows() {
   const res = await fetch('https://api.tvmaze.com/shows');
   const data = await res.json();
@@ -112,6 +126,27 @@ export default async function getShows() {
     const ID = btn.value;
     btn.addEventListener('click', () => {
       createModal(ID - 1);
+    });
+  });
+
+  let likearray = [];
+  const uri = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xyqrGgTcdx9Ydfnm5uk2/likes';
+  const response = await fetch(uri, {
+    method: 'GET',
+  });
+  if (response.ok) {
+    likearray = await response.json();
+  } else {
+    Error(`API request error: ${response.status}`);
+  }
+
+  const likeIcons = document.querySelectorAll('.fa-heart');
+  likeIcons.forEach(async (icon) => {
+    const ID = icon.id;
+    const myarray = likearray.filter((element) => element.item_id === ID);
+    icon.insertAdjacentHTML('afterend', `<span id="sp${ID}">${myarray[0].likes}</span>`);
+    icon.addEventListener('click', () => {
+      addlike(ID);
     });
   });
   return showsList;
