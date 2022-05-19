@@ -33,6 +33,5 @@ function updateCounter() {
   commentsCounter[0].innerText = `(${counter})`;
   const updatedCounter = commentsCounter;
   return updatedCounter;
-  const result = updateCounter();
-  expect(result).not.toBeNull();
+  updateCounter();
 }
