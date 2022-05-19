@@ -178,3 +178,7 @@ textarea {
   justify-content: space-between;
   gap: 20px;
 }
+
+.label {
+  margin: 20px;
+}
