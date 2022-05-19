@@ -19,7 +19,7 @@
 [Video link](https://drive.google.com/file/d/1D-y1Rhc4E0yFH7o8dmgjGcvOGnMayFCi/view)
 
 ## Description
-The JavaScript capstone project  is about building your own web application based on an external API. You will select an API that provides data about a topic that you like and then build the webapp around it.
+JavaScript Capstone API Based Project using an external API-TVmaze API for displaying and interacting with movie items from the data base. 
 
 ## Requirements
 
