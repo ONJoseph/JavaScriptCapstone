@@ -33,5 +33,6 @@ function updateCounter() {
   commentsCounter[0].innerText = `(${counter})`;
   const updatedCounter = commentsCounter;
   return updatedCounter;
+  return updateCounter;
 }
-export const updateCounter = updatedCounter;
+
