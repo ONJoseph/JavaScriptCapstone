@@ -1,0 +1,265 @@
+@font-face {
+  font-family: 'Roboto, sans serif';
+  src: url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #d6c636;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-top: -0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.botHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menuItems {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 42%;
+  margin-right: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.logo {
+  height: 100px;
+  border-radius: 50%;
+  width: 160px;
+  margin-left: 1rem;
+}
+
+.Shows {
+  display: grid;
+  gap: 12px;
+  padding: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #000;
+  padding-bottom: 1rem;
+}
+
+.movie-title {
+  font-family: "Roboto", sans-serif;
+}
+
+.movie-image {
+  width: 200px;
+}
+
+.userInterAct {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  width: 90%;
+}
+
+.likesCont {
+  display: flex;
+  align-items: baseline;
+}
+
+.fa-heart {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.fa-heart:hover {
+  color: #f00;
+  transform: scale(1.25);
+  transition: all 0.5s;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 5%;
+  left: 5%;
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+.show-container {
+  padding: 1rem;
+  background-color: #0dbae6;
+}
+
+.close-btn {
+  display: flex;
+  justify-content: flex-end;
+  color: #f00;
+  font-size: 35px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+
+.show-info {
+  display: flex;
+  column-gap: 2rem;
+  padding-right: 2rem;
+}
+
+.details > h1 {
+  margin-top: 0;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.meta span {
+  font-weight: bold;
+}
+
+.left-side,
+.right-side {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.comments-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+input,
+textarea {
+  border: solid 2px #000;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  margin: 10px 0 0;
+  border-radius: 6px;
+}
+
+#submit-btn {
+  margin-top: 1.4rem;
+  max-width: 5rem;
+  text-align: center;
+  align-self: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #000;
+  background-color: #0dbae6;
+  box-shadow: 2px 2px 2px;
+  cursor: pointer;
+}
+
+button:hover,
+#submit-btn:hover {
+  background-color: #2c8ce6;
+  box-shadow: 1px 1px 2px;
+}
+
+.comment-btn {
+  margin-top: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  border-top: 1px solid #000;
+  margin-top: 4rem;
+  padding: 0 1.5rem;
+}
+
+.licence {
+  font-family: "Roboto", sans-serif;
+}
+
+.label {
+  margin: 20px;
+}
+
+.dev {
+  display: flex;
+  align-items: flex-start;
+  align-items: baseline;
+  padding-left: 1.5rem;
+  gap: 1.5rem;
+}
+
+.media-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.fab {
+  color: #2c8ce6;
+  font-size: large;
+  cursor: pointer;
+}
+
+.fab:hover {
+  background-color: #2c8ce6;
+  transform: scale(1.125);
+  transition: all 0.4s;
+}
+
+#ump {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  font-weight: 800;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .Shows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .menuItems {
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .dev > h3 {
+    font-size: 1.5rem;
+  }
+}
